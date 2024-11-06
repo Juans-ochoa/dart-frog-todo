@@ -39,7 +39,6 @@ class TaskRepositoryImpl implements TaskRepository {
   Future<TaskModel> createTask(TaskModel task) async {
     try {
       final result = await _dbCollection.insertOne(task.toMap());
-      print(result.isSuccess);
 
       if (result.isSuccess) {
         return TaskModel.fromMap(result.document!);

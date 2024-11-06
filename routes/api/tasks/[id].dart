@@ -7,7 +7,6 @@ Future<Response> onRequest(
   String id,
 ) async {
   final request = context.request;
-
   final method = request.method;
 
   try {
@@ -32,5 +31,4 @@ Future<Response> onRequest(
       },
     );
   }
-  return Response(body: 'This is a new route!');
 }
